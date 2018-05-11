@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maintenance Tracker :: Login </title>
+  <meta name="description" content="Maintenance Tracker App is an application that 
+provides users with the ability to reach out to operations or repairs department 
+regarding repair or maintenance requests and monitor the status of their request.">
+  <meta name="author" content="Ezea Obinna">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./request-style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Maintenance Tracker</h1>
+  </header>
+
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="#">Ticket</a>
+    <a href="#">History</a>
+    <a href="login.html" style="float:right">Logout</a>
+  </nav>
+
+  <section>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>TICKET DETAILS</h2>
+
+          <form name="ticket-form" id="ticket-form" method="POST" action="#">
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Subject</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="subject" name="subject" placeholder="subject..">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="category">Category</label>
+              </div>
+              <div class="col-75">
+                <select id="category" name="category">
+                  <option value="MaintenanceCategory">Maintenance Category</option>
+                  <option value="PreventiveMaintenance">Preventive Maintenance</option>
+                  <option value="CorrectiveMaintenance">Corrective Maintenance</option>
+                  <option value="PredictiveMaintenance">Predictive Maintenance</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="description">Description</label>
+              </div>
+              <div class="col-75">
+                <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <p>
+                <button type="submit" >Create</button>
+              </p>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>TICKET HISTORY</h2>
+
+          <table id="ticket">
+            <tr>
+              <th>ID</th>
+              <th>Date</th>
+              <th>Subject</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td>2018-04-12</td>
+              <td>Powerplant fail start</td>
+              <td>Approved</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>2018-04-12</td>
+              <td>oil pump not functioning</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td>2018-04-14</td>
+              <td>Pressure Valve malfuntioning</td>
+              <td>Resolved</td>
+            </tr>
+            <tr>
+              <td>65</td>
+              <td>2018-04-15</td>
+              <td>Broken oil seal</td>
+              <td>Approved</td>
+            </tr>
+            <tr>
+              <td>43</td>
+              <td>2018-04-16</td>
+              <td>Flow Meter issues</td>
+              <td>Resolved</td>
+            </tr>
+            <tr>
+              <td>84</td>
+              <td>2018-04-16</td>
+              <td>Rotor motor Over heating </td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>450</td>
+              <td>2018-04-16</td>
+              <td>Proximity Switch not responding</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>65</td>
+              <td>2018-04-17</td>
+              <td>Broken conveyor belt</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>345</td>
+              <td>2018-04-20</td>
+              <td>Filler machine out of precision</td>
+              <td>Resolved</td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+</body>
+
+</html>

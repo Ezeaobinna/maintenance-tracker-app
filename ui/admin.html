@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maintenance Tracker :: Admin </title>
+  <meta name="description" content="Maintenance Tracker App is an application that 
+provides users with the ability to reach out to operations or repairs department 
+regarding repair or maintenance requests and monitor the status of their request.">
+  <meta name="author" content="Ezea Obinna">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./request-style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Maintenance Tracker</h1>
+  </header>
+
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="#">User</a>
+    <a href="#">Report</a>
+    <a href="login.html" style="float:right">Logout</a>
+  </nav>
+
+  <section>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>TICKET DETAILS</h2>
+          <p>Please select ticket from the table on the right to update the status</p> 
+
+          <form name="ticket-form" id="ticket-form" method="POST" action="#">
+
+            <div class="row">
+              <div class="col-25">
+                <label for="ticketDate">Date</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="ticketDate" name="ticketDate" value="2018-04-15" readonly >
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                  <label for="user">User</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="user" name="user" value="Michael Farad" readonly >
+                </div>
+              </div>
+
+            <div class="row">
+                <div class="col-25">
+                  <label for="subject">Subject</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="subject" name="subject" value="Powerplant fail start" readonly >
+                </div>
+              </div>
+
+            <div class="row">
+                <div class="col-25">
+                  <label for="subject">Category</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="subject" name="subject" value="Preventive" readonly >
+                </div>
+              </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="description">Description</label>
+              </div>
+              <div class="col-75">
+                <textarea id="description" name="description" placeholder="Write something.." rows=5 readonly></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="ticketStatus">Ticket Status</label>
+              </div>
+              <div class="col-75">
+                <select id="ticketStatus" name="ticketStatus" >
+                  <option value="Pending">Pending</option>
+                  <option value="Rejected">Rejected</option>
+                  <option value="Approved">Approved</option>
+                  <option value="Resolved">Resolved</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <p>
+                <button type="submit" name="update" id="update">Save</button>
+              </p>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>TICKET HISTORY</h2>
+
+          <table id="ticket">
+            <tr>
+                <th><a href="#" class="sort">ID <img src="./images/sort-32.png" width="16px" width="16px" class="sorti" /></a></th>
+                <th><a href="#" class="sort">Date <img src="./images/sort-32.png" width="16px" width="16px" class="sorti" /></a></th>
+                <th><a href="#" class="sort">User <img src="./images/sort-32.png" width="16px" width="16px" class="sorti" /></a></th>
+                <th><a href="#" class="sort">Category <img src="./images/sort-32.png" width="16px" width="16px" class="sorti" /></a></th>
+                <th><a href="#" class="sort">Subject <img src="./images/sort-32.png" width="16px" width="16px" class="sorti" /></a></th>
+                <th><a href="#" class="sort">Status <img src="./images/sort-32.png" width="16px" width="16px" class="sorti" /></a></th>
+            </tr>
+
+            <tr>
+                <td colspan=6><input type="text" name="search" id="search" class="search" placeholder="Filter..."></td>
+            </tr>
+
+            <tr>
+              <td>32</td>
+              <td>2018-04-12</td>
+              <td>Michael Farad</td>
+              <td>Preventive</td>
+              <td>Powerplant fail start</td>
+              <td><button class="status-approved">Approved</button></td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>2018-04-12</td>
+              <td>Okpara Yinka</td>
+              <td>Preventive</td>
+              <td>oil pump not functioning</td>
+              <td><button class="status-pending">Pending</button></td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td>2018-04-14</td>
+              <td>Nnenna Omeye</td>
+              <td>Corrective</td>
+              <td>Pressure Valve malfuntioning</td>
+              <td><button class="status-resolved">Resolved</button></td>
+            </tr>
+            <tr>
+              <td>65</td>
+              <td>2018-04-15</td>
+              <td>Eze Obinna</td>
+              <td>Corrective</td>
+              <td>Broken oil seal</td>
+              <td><button class="status-approved">Approved</button></td>
+            </tr>
+            <tr>
+              <td>43</td>
+              <td>2018-04-16</td>
+              <td>Clinton Obama</td>
+              <td>Corrective</td>
+              <td>Flow Meter issues</td>
+              <td><button class="status-rejected">Rejected</button></td>
+            </tr>
+            <tr>
+              <td>84</td>
+              <td>2018-04-16</td>
+              <td>Sunday Okoh</td>
+              <td>Category</td>
+              <td>Rotor motor Over heating </td>
+              <td><button class="status-pending">Pending</button></td>
+            </tr>
+            <tr>
+              <td>450</td>
+              <td>2018-04-16</td>
+              <td>Kenneth Ezea</td>
+              <td>Category</td>
+              <td>Proximity Switch not responding</td>
+              <td><button class="status-pending">Pending</button></td>
+            </tr>
+            <tr>
+              <td>65</td>
+              <td>2018-04-17</td>
+              <td>Thiago Ronaldo</td>
+              <td>Category</td>
+              <td>Broken conveyor belt</td>
+              <td><button class="status-pending">Pending</button></td>
+            </tr>
+            <tr>
+              <td>345</td>
+              <td>2018-04-20</td>
+              <td>Victoria Offor</td>
+              <td>Category</td>
+              <td>Filler machine out of precision</td>
+              <td><button class="status-resolved">Resolved</button></td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+</body>
+
+</html>
