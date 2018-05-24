@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Maintenance Tracker :: Login </title>
     <meta name="description" content="Maintenance Tracker App is an application that 
-provides users with the ability to reach out to operations or repairs department 
-regarding repair or maintenance requests and monitor the status of their request.">
+    enable users to create maintenance requests and monitor the status of their requests.">
     <meta name="author" content="Ezea Obinna">
     <link rel="stylesheet" href="./login.css">
+    <script src="email_validation.js"></script>
 </head>
 
 <body>
@@ -18,10 +18,24 @@ regarding repair or maintenance requests and monitor the status of their request
     </header>
     <section>
         <div class="container">
-            <form name="login" id="login" method="POST" action="index.html" autocomplete="off">
+            <form name="login" id="login" method="POST" action="index.html" autocomplete="off" onSubmit="return ValidateEmail(uemail);">
                 <h2>Login</h2>
-                <input type="text" name="Email" placeholder="Your Email..." autocomplete="false" required/>
-                <input type="password" name="Password" placeholder="Your password..." autocomplete="false" required />
+
+                <div class="row">
+                    <div class="col-25"><label for="email">Email</label></div>
+                    <div class="col-75">
+                        <input type="email" name="Email" placeholder="Your Email..." autocomplete="false" required/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25"><label for="password">Password</label></div>
+                    <div class="col-75">
+                        <input type="password" name="Password" placeholder="Your password..." autocomplete="false" required />                    </div>
+                </div>
+
+                
+                
                 <button type="submit" class="login-btn">Login</button>
                 <p>Create an account?
                     <a href="register.html">Register</a>

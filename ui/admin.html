@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maintenance Tracker :: Admin </title>
   <meta name="description" content="Maintenance Tracker App is an application that 
-provides users with the ability to reach out to operations or repairs department 
-regarding repair or maintenance requests and monitor the status of their request.">
+   enable users to create maintenance requests and monitor the status of their requests.">
   <meta name="author" content="Ezea Obinna">
 
   <link rel="stylesheet" href="./style.css">
@@ -16,22 +15,24 @@ regarding repair or maintenance requests and monitor the status of their request
 
 <body>
 
-  <header class="header">
-    <h1>Maintenance Tracker</h1>
-  </header>
 
   <nav class="topnav">
-    <a href="index.html">Home</a>
-    <a href="#">User</a>
-    <a href="#">Report</a>
+    <a href="#">Home</a>
+    <a href="index.html">User</a>
+    <a href="#"></a>
     <a href="login.html" style="float:right">Logout</a>
   </nav>
+  
+  <header class="header" id="header-admin">
+    <h1>Maintenance Tracker</h1>
+		:: Welcome Admin ::
+  </header>
 
   <section>
     <div class="row">
       <div class="leftcolumn">
         <div class="card">
-          <h2>TICKET DETAILS</h2>
+          <h2>USER REQUEST DETAILS</h2>
           <p>Please select ticket from the table on the right to update the status</p> 
 
           <form name="ticket-form" id="ticket-form" method="POST" action="#">

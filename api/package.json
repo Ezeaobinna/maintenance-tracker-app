@@ -1,0 +1,25 @@
+{
+  "name": "challenge-2",
+  "version": "1.0.0",
+  "description": "maintenance tracker api",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha || true",
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.1",
+    "express": "~4.0.0",
+    "nodemon": "^1.17.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ezeaobinna/challenge-2.git"
+  },
+  "author": "ezeaobinna@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ezeaobinna/challenge-2/issues"
+  },
+  "homepage": "https://github.com/Ezeaobinna/challenge-2#readme"
+}

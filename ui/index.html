@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maintenance Tracker :: Login </title>
   <meta name="description" content="Maintenance Tracker App is an application that 
-provides users with the ability to reach out to operations or repairs department 
-regarding repair or maintenance requests and monitor the status of their request.">
+   enable users to create maintenance requests and monitor the status of their requests.">
   <meta name="author" content="Ezea Obinna">
 
   <link rel="stylesheet" href="./style.css">
@@ -16,22 +15,25 @@ regarding repair or maintenance requests and monitor the status of their request
 
 <body>
 
-  <header class="header">
-    <h1>Maintenance Tracker</h1>
-  </header>
-
   <nav class="topnav">
     <a href="index.html">Home</a>
-    <a href="#">Ticket</a>
-    <a href="#">History</a>
+    <!--  <a href="#">Ticket</a>
+        <a href="#">History</a>-->
+    <a href="admin.html">Admin</a>
     <a href="login.html" style="float:right">Logout</a>
   </nav>
+
+  <header class="header" id="header-user">
+    <h1>Maintenance Tracker</h1>
+	:: Welcome User ::
+  </header>
+
 
   <section>
     <div class="row">
       <div class="leftcolumn">
         <div class="card">
-          <h2>TICKET DETAILS</h2>
+          <h3>CREATE MAINTENANCE REQUEST</h3>
 
           <form name="ticket-form" id="ticket-form" method="POST" action="#">
             <div class="row">
@@ -66,7 +68,7 @@ regarding repair or maintenance requests and monitor the status of their request
             </div>
             <div class="row">
               <p>
-                <button type="submit" >Create</button>
+                <button type="submit">Create</button>
               </p>
             </div>
           </form>
@@ -76,7 +78,7 @@ regarding repair or maintenance requests and monitor the status of their request
 
       <div class="rightcolumn">
         <div class="card">
-          <h2>TICKET HISTORY</h2>
+          <h3>VIEW REQUEST HISTORY</h3>
 
           <table id="ticket">
             <tr>

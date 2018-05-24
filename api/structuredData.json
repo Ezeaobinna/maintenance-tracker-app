@@ -1,0 +1,61 @@
+{
+    "UsersTable": [
+      {
+        "id": 1,
+        "type": "admin",
+        "firstName": "Fidelis",
+        "lastName": "Ezea",
+        "email": "admin@gmail.com",
+        "password": "1234",     
+        "date": "2018-05-22"
+      },
+      {
+        "id": 2,
+        "type": "admin",
+        "firstName": "Emeka",
+        "lastName": "Okoro",
+        "email": "emeka@gmail.com",
+        "password": "1234",     
+        "date": "2018-05-22"
+      },
+      {
+        "id": 3,
+        "type": "user",
+        "firstName": "Uche",
+        "lastName": "Casmir",
+        "email": "admin@gmail.com",
+        "password": "1234",     
+        "date": "2018-05-23"
+      }
+      
+    ],
+    "RequestsTable": [
+      {
+        "id": 1,
+        "user": 1,
+        "subject": "wireless card",
+        "category": "preventive",
+        "description": "Doesn't display SSID",
+        "status": "Pending",
+        "date": "2018-05-21"
+      },
+      {
+        "id": 2,
+        "user": 1,
+        "subject": "Piston",
+        "category": "predictive",
+        "description": "makes noise",
+        "status": "Approved",
+        "date": "2018-05-23"
+      },
+      {
+        "id": 3,
+        "user": 2,
+        "subject": "Oil pump",
+        "category": "corrective",
+        "description": "oil pump not functioning",
+        "status": "Resolved",
+        "date": "2018-05-22"
+      }
+    ]
+  }
